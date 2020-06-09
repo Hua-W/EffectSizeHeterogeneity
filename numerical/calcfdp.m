@@ -1,8 +1,8 @@
 function fdp = calcfdp(alpha, delta, eps, tpp)
     % The function finds fdp given eps, alpha and tpp. It's also a wrapper
-    % concerning the invalid inputs of tpp < 0;
-    % it will also be invalid if above the eps/delta*tpp + fdp<= 1 line
+    % concerning the invalid inputs of tpp < 0; or above the eps/delta*tpp + fdp<= 1 line
     % @author: Hua Wang
+    % It returns fdp = -1 if no valid solution.
     if tpp < 0 
         fdp = -1;
     else    

@@ -1,5 +1,5 @@
-% This file serves at to draw a lasso curve that touches the lower boundary
-% multiple times.
+% This file illustrate how to draw lasso paths that have several 
+% intersection with the lower boundary found in (Su et al, 2017).
 
 delta = 1; %n/p = delta
 eps = 0.2; %sparsity level eps = k/p

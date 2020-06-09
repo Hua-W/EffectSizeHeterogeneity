@@ -1,4 +1,5 @@
-% This file serves at to draw a publishable Lasso Crescent.
+% This file is an illustration of how to use the function calcLassoPath to
+% draw a Lasso Crescent.
 
 delta = 1; %n/p = delta
 eps = 0.2; %sparsity level eps = k/p

@@ -2,24 +2,17 @@ function tau = calctau(alpha, delta, eps, gamma, M, sigma)
     % The function calculate the value of tau via bi-search.
     % @author:Hua Wang
     %
-    % The argument given are the values of alpha, delta = n/p, eps = k/p, 
-    % gamma, M, and the interval of search: a, b.
-    %
-    % Sigma is the noise level, tau must be larger than it
-    %
-    % Ideally, gamma should take a sequence of gammas add to 1, are the prob
-    % of each magnitude in sequence M. M is the sequence of magnitudes of
-    % non-zero signals. If they are only one number, take gamma = 1, M = 50
-    % as default. The upper curve only need this.
-    
-    
-    %a0 = max(calcalpha0(delta), 0);
-    %a = a0 + 1e-2;
+    % @params: 
+    % ALPHA, DELTA = n/p, EPS = k/p, 
+    % GAMMA and M jointly represents a finite-point prior.
+    % SIGMA is the noise level. tau must be larger than it
+    % 
+    % If there's no valid solution, return tau = -1.
+       
     a = 1;
     b = 100;
         
    while res(alpha, a + sigma, eps, delta, gamma, M, sigma) * res(alpha, b + sigma, eps, delta, gamma, M, sigma) > 0
-        %a = a0 + (a - a0) * 0.1;
         a = a * 0.1;
         b = b * 10;
         if a < 1.0e-14

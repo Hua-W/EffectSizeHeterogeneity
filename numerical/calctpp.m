@@ -1,7 +1,7 @@
 function tpp = calctpp(alpha, delta, eps, gamma, M, sigma)
     % The function finds tpp given alpha, delta, eps, gamma, M, and sigma.
     % @author: Hua Wang
-    
+    % return tpp = -1 if no valid solution.
    
     tau = calctau(alpha, delta, eps, gamma, M, sigma);
     if tau < 0
